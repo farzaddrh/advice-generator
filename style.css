@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    font-size: 1.6rem;
+    background-color: hsl(218, 23%, 16%);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart {
+    max-width: 60rem;
+    background-color: hsl(217, 19%, 38%);
+    border-radius: 1.6rem;
+    padding: 4rem;
+    padding-bottom: 8rem;
+    text-align: center;
+    position: relative;
+}
+
+.advice-number {
+    color: hsl(150, 100%, 66%);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 1rem;
+}
+
+.advice {
+    color: hsl(193, 38%, 86%);
+    margin-bottom: 5rem;
+    font-size: 2.8rem;
+    line-height: 1.5;
+}
+
+.dice-icon {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, +50%);
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 50%;
+    padding: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+}
+
+.dice-icon:hover {
+    background-color: hsl(150, 53%, 44%);
+}
+
+.divider-container {
+    position: relative;
+    background-image: url("images/pattern-divider-desktop.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 16px;
+}
+
+.divider-container::before {
+    content: "";
+    width: 40%;
+    height: 1px;
+    left: 2.3rem;
+    bottom: 0.74rem;
+    position: absolute;
+    display: block;
+    background-color: #7c888c;
+}
+
+.divider-container::after {
+    content: "";
+    width: 40%;
+    height: 1px;
+    right: 2.5rem;
+    bottom: 0.74rem;
+    position: absolute;
+    display: block;
+    background-color: #7c888c;
+}
+
+@media (max-width: 760px) {
+    .cart {
+        max-width: 40rem;
+    }
+    .advice {
+        font-size: 2rem;
+    }
+    .divider-container::after {
+        right: 1rem;
+    }
+    .divider-container::before {
+        left: 1rem;
+    }
+}
+@media (max-width: 450px) {
+    .cart {
+        max-width: 35rem;
+        padding-bottom: 6rem;
+    }
+    .advice {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+    .divider-container {
+        background-image: url("images/pattern-divider-mobile.svg");
+    }
+    .divider-container::after {
+        right: 0.5rem;
+    }
+    .divider-container::before {
+        left: 0.5rem;
+    }
+}
